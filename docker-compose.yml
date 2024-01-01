@@ -46,8 +46,8 @@ services:
     volumes:
       - "backend-data:/app/backend/data"
     environment:
-      - OPENAI_API_KEY= #need your key here
-      # - OPENAI_API_BASE=
+      - OPENAI_API_KEY=Y2thZG9pMXAyazEwOW9hbjZmNTA6bXNrLUxDNUxXYmNKOEc0Z0xyV0VuYW95WlR2a0Y4dWk=
+      - OPENAI_API_BASE=https://api.moonshot.cn/v1
       - REDIS_SERVER=redis
       - MONGO_SERVER=mongodb
       - CODE_INTER_SERVER=code_interpreter
