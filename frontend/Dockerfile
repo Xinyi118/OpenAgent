@@ -12,7 +12,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 # If the backend is not running locally, it is important to uncomment and modify the following line
-ENV NEXT_PUBLIC_BACKEND_ENDPOINT http://localhost:8000
+# ENV NEXT_PUBLIC_BACKEND_ENDPOINT http://localhost:8000
 # http://localhost:8000
 
 RUN npm run build:docker
