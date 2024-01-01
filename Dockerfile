@@ -185,8 +185,8 @@ ENV VARIABLE_REGISTER_BACKEND=redis \
     JUPYTER_KERNEL_MEMORY_MANAGER_BACKEND=database \
     FLASK_APP=backend.main.py
 # it is important to use kaggle dataset
-ENV KAGGLE_USER="" \
-    KAGGLE_KEY="" 
+ENV KAGGLE_USER="xinyi2024" \
+    KAGGLE_KEY="3abd9e2479851f3880b8b57906e8fa05" 
 RUN mkdir /root/.kaggle && \
     echo "{\"username\":\"$KAGGLE_USER\",\"key\":\"$KAGGLE_KEY\"}" > /root/.kaggle/kaggle.json && \
     chmod 600 /root/.kaggle/kaggle.json
