@@ -16,7 +16,7 @@ def get_llm_list():
             "gpt-4",
             "claude-v1",
             "claude-2",
-            "lemur-chat"
+            "Moonshot"
         ]
     ]
 
@@ -39,11 +39,11 @@ def get_llm(llm_name: str, **kwargs) -> BaseLanguageModel:
             anthropic_api_key=anthropic_api_key,
             **kwargs,
         )
-    elif llm_name == "lemur-chat":
+    elif llm_name == "Moonshot":
         return ChatOpenAI(
-            model_name="lemur-70b-chat-v1",
+            model_name="Moonshot",
             streaming=True,
-            openai_api_base="https://model-api.xlang.ai/v1",
+            openai_api_base="https://api.moonshot.cn/v1",
             verbose=True,
             max_tokens=2048,
             **kwargs
