@@ -12,7 +12,7 @@ COPY . .
 
 ENV NEXT_TELEMETRY_DISABLED 1
 # If the backend is not running locally, it is important to uncomment and modify the following line
-# ENV NEXT_PUBLIC_BACKEND_ENDPOINT http://x.x.x.x:8000
+ENV NEXT_PUBLIC_BACKEND_ENDPOINT http://127.0.0.1:8000
 
 RUN npm run build:docker
 
@@ -21,8 +21,6 @@ WORKDIR /app
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
-ENV NEXT_PUBLIC_BACKEND_ENDPOINT http://0.0.0.0:8000
-# add backend access IP address
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
